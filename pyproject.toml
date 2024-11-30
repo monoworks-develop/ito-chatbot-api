@@ -2,13 +2,15 @@
 name = "app"
 version = "0.1.0"
 description = ""
-authors = ["ito"]
-license = "MIT"
-readme = "README.md"
+package-mode = false
+
+[tool.poetry.scripts]
+dev = "fastapi dev main.py"
 
 [tool.poetry.dependencies]
 python = "^3.13"
 fastapi = {extras = ["standard"], version = "^0.115.5"}
+uvicorn = {extras = ["standard"], version = "^0.32.1"}
 
 
 [tool.poetry.group.dev.dependencies]

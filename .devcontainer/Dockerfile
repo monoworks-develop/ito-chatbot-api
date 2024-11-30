@@ -1,4 +1,3 @@
-# https://hub.docker.com/r/microsoft/devcontainers-python
 FROM python:3-slim-bookworm
 
 RUN apt-get update && apt-get install -y \
@@ -19,5 +18,6 @@ RUN groupadd --gid $USER_GID $USER_NAME \
 # non-root-userに切り替え
 USER $USER_NAME
 
+# poetryのインストール
 RUN pip install --upgrade pip && \
   pip install poetry
