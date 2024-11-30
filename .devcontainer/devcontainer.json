@@ -1,0 +1,17 @@
+{
+  "name": "Ito Chatbot API",
+  "dockerComposeFile": "./compose.yml",
+  "service": "app",
+  "workspaceFolder": "/home/user/app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "GitHub.copilot",
+        "oderwat.indent-rainbow",
+        "ms-python.black-formatter",
+        "rioukkevin.vscode-git-commit"
+      ]
+    }
+  }
+}
