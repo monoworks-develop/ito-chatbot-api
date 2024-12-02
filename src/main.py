@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 
+from .config import get_settings
+
 from .models.ask_input import AskInput
 
 from .azure_openai import ask
@@ -9,7 +11,8 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello World"}
+    settings = get_settings()
+    return {"message": "Hello World", "endpoint": settings.AZURE_OPENAI_ENDPOINT}
 
 
 @app.get("/items/{item_id}")
