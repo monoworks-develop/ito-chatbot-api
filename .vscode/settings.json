@@ -1,4 +1,14 @@
 {
+  "editor.tabSize": 2,
+  "[python]": {
+    "editor.tabSize": 4
+  },
+
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "ms-python.black-formatter"
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "flake8.args": ["--max-line-length=88"],
 }
