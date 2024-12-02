@@ -10,7 +10,9 @@
         "GitHub.copilot",
         "oderwat.indent-rainbow",
         "ms-python.black-formatter",
-        "rioukkevin.vscode-git-commit"
+        "rioukkevin.vscode-git-commit",
+        "esbenp.prettier-vscode",
+        "ms-python.flake8"
       ]
     }
   }
