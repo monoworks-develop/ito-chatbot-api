@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 
+from .ai_search import ai_search
+
 from .config import get_settings
 
 from .models.ask_input import AskInput
@@ -24,3 +26,9 @@ def read_item(item_id: int, q: str = None):
 async def ask_model(ask_input: AskInput):
     res = ask(ask_input)
     return {"res": res}
+
+
+@app.post("/aisearch")
+async def aisearch(text: str):
+    response = await ai_search(text)
+    return {"res": response}
