@@ -15,6 +15,10 @@ langchain = "^0.3.9"
 langchain-openai = "^0.2.10"
 pydantic = "^2.10.2"
 pydantic-settings = "^2.6.1"
+azure-identity = "^1.19.0"
+azure-search-documents = "^11.5.2"
+langchain-community = "^0.3.9"
+requests = "^2.32.3"
 
 
 [tool.poetry.group.dev.dependencies]
