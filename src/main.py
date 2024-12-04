@@ -1,34 +1,13 @@
 from fastapi import FastAPI
 
-from .ai_search import ai_search
-
-from .config import get_settings
-
-from .models.ask_input import AskInput
-
-from .azure_openai import ask
+from src.controller.router import api_router
 
 app = FastAPI()
 
 
 @app.get("/")
 def read_root():
-    settings = get_settings()
-    return {"message": "Hello World", "endpoint": settings.AZURE_OPENAI_ENDPOINT}
+    return {"message": "Hello World"}
 
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: str = None):
-    return {"item_id": item_id, "q": q}
-
-
-@app.post("/ask")
-async def ask_model(ask_input: AskInput):
-    res = ask(ask_input)
-    return {"res": res}
-
-
-@app.post("/aisearch")
-async def aisearch(text: str):
-    response = await ai_search(text)
-    return {"res": response}
+app.include_router(router=api_router)
