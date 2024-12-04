@@ -1,16 +1,6 @@
 from azure.search.documents.models import VectorizableTextQuery
-from fastapi import APIRouter
 
-from src.infrastructure.azure_ai_search import ai_search_client
-
-
-router = APIRouter(prefix="/azure_ai_search", tags=["azure_ai_search"])
-
-
-@router.post("/vector_search")
-async def aisearch(text: str):
-    response = vector_search(text)
-    return {"res": response}
+from src.infrastructure.azure.ai_search.client import ai_search_client
 
 
 def vector_search(text: str):

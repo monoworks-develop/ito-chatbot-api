@@ -12,7 +12,8 @@
         "ms-python.black-formatter",
         "rioukkevin.vscode-git-commit",
         "esbenp.prettier-vscode",
-        "ms-python.flake8"
+        "ms-python.flake8",
+        "ms-python.isort"
       ]
     }
   }

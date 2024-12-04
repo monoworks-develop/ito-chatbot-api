@@ -1,8 +1,6 @@
 from fastapi import APIRouter
 
-
-from src.controllers import azure_ai_search, azure_openai
-
+from src.controller import azure_ai_search, azure_openai
 
 api_router = APIRouter()
 
